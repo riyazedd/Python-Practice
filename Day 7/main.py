@@ -47,19 +47,22 @@
 # print(users)
 
 ##---------------------------------------------------------------
-data=[1,2,3,4,5,6,7,8,9,10,3,7,9,9,2,2]
+data=[1,2,3,4,5,6,7,8,9,10,3,7,9,9,2,2,10,10,7,7]
+##finding all repeated numebrs
 rep=[]
 for x in data:
     if data.count(x)>1 and x not in rep:
         rep.append(x)
-
 print("Repeated numbers= ",rep)
 
-# data = [1,2,3,4,2,4,7,8,9,10,10,7,9,8,4,9];#Data source😍
-# evenDups = [x for x in data if data.count(x)>1 and x %2 == 0]
-# oddDups = [x for x in data if data.count(x)>1 and x %2 != 0]
-# print(f"The total duplicate elements in the given data is {len(set(evenDups))+len(set(oddDups))}")
-# for eDups in set(evenDups):#Counts even duplicates😋
-#     print(f"{eDups} has been repeated {data.count(eDups)} times")
-# for oDups in set(oddDups):#Counts odd duplicates😋
-#     print(f"{oDups} has repeated {data.count(oDups)} times")
+##finding even and odd repeated numbers
+evenRep =set([x for x in rep if x%2==0])
+oddRep = set([x for x in rep if x%2 != 0])
+print(f"Total number of repeated even numbers= {len(evenRep)}")
+print(f"Total number of repeated odd numbers= {len(oddRep)}")
+
+##counting the number of repetition of each repeated numbers
+for eRep in evenRep:
+    print(f"Number of repetition of {eRep}= {data.count(eRep)}")
+for oRep in oddRep:
+    print(f"Number of repetition of {oRep}= {data.count(oRep)}")
