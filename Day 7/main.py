@@ -34,24 +34,20 @@
     
 # print("Number of laxmi=",count)
 
-num=int(input("Enter the number of users= "))
-name=1
-users=[]
-while name<=num:
-    # for x in range(1):
-    username=input("Enter your username: ")
-    users.append(username)
-    name +=1
-print(users)
+# num=int(input("Enter the number of users= "))
+# name=1
+# users=[]
+# while name<=num:
+#     # for x in range(1):
+#     username=input("Enter your username: ")
+#     users.append(username)
+#     name +=1
+# print(users)
 
-# data=[1,2,3,4,5,6,7,8,9,10,3,7,9,9]
-# size=len(data)
-# repeat=[]
-
-# for x in range(size):
-#     k=x+1
-#     for j in range(k,size):
-#         if data[x]==data[j] and data[j] not in repeat:
-#             repeat.append(data[j])
-
-# print(repeat)
+##
+data=[1,2,3,4,5,6,7,8,9,10,3,7,9,9]
+rep=[]
+for x in data:
+    if data.count(x)>1 and x not in rep:
+        rep.append(x)
+print(rep)
