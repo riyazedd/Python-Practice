@@ -9,22 +9,40 @@
 #     for y in x:
 #         print(y)
 
-num1=int(input("Enter first number= "))
-num2=int(input("Enter second number= "))
-num3=int(input("Enter third number= "))
+x=int(input("Enter first number= "))
+y=int(input("Enter second number= "))
+z=int(input("Enter third number= "))
 
-if num1>num2 and num1>num3:
-    if num2>num3:
-        print(num1,num2,num3)
+# if num1>num2 and num1>num3:
+#     if num2>num3:
+#         print(num1,num2,num3)
+#     else:
+#         print(num1,num2,num3)
+# elif num2>num1 and num2>num3:
+#     if num1>num3:
+#         print(num2,num1,num3)
+#     else:
+#         print(num2,num3,num1)
+# else:
+#     if num1>num2:
+#         print(num3,num1,num2)
+#     else:
+#         print(num3,num2,num1)
+
+if x>y and x>z:
+    if y>z:
+        x,y,z=x,y,z
     else:
-        print(num1,num2,num3)
-elif num2>num1 and num2>num3:
-    if num1>num3:
-        print(num2,num1,num3)
+        x,y,z=x,z,y
+elif y>x and y>z:
+    if x>z:
+        x,y,z=y,x,z
     else:
-        print(num2,num3,num1)
+        x,y,z=y,z,x
 else:
-    if num1>num2:
-        print(num3,num1,num2)
+    if x>y:
+        x,y,z=z,x,y
     else:
-        print(num3,num2,num1)
+        x,y,z=z,y,x
+
+print(x,y,z)
