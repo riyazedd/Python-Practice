@@ -1,25 +1,29 @@
+subjects=['Maths','MicroProcessor','English','C Programming','Account']
+marks=[]
 def take_marks():
-    # marks=[]
-    nep=int(input("Enter marks of Nepali= "))
-    eng=int(input("Enter marks of English= "))
-    mth=int(input("Enter marks of Math= "))
-    sci=int(input("Enter marks of SCience= "))
-    acc=int(input("Enter marks of Account= "))
-    subject=[nep,eng,mth,sci,acc]
-    # marks.append(subject)
-    return subject
-
+    for i in range(len(subjects)):
+        marks.append(int(input(f"Enter the marks of {subjects[i]}: ")))
+    return marks
 def total():
-    return sum(take_marks())
+    return sum(marks)
 
 def percentage():
-    sum=total()
-    per=sum/5
+    per=total()/5
     return per
-    
-def display():
-    take_marks()
-    print(total())
-    print(percentage())
 
-display()
+def grade():
+    if percentage()>=80:
+        division='A'
+        return division
+    elif percentage()>=60:
+        division='B'
+        return division
+    elif percentage()>=40:
+        division='C'
+        return division
+    else:
+        division='D'
+        return division
+take_marks()
+print("----------RESULT----------")
+print(f"Total Marks: {total()}\nPercentage Obtained: {percentage()}\nGrade Obtained: {grade()}")
