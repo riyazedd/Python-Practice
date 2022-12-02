@@ -1,6 +1,7 @@
 from operations import add,sub,mul,div #operations bata import gareko
 
 print("Operations:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Dvision")
+
 opt=int(input("Enter Your Operation: "))
 
 if opt<=4: #if operations choice 4 samma vayo vane matra execute hunxa
