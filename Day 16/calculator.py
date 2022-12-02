@@ -8,15 +8,15 @@ b=int(input("Enter second number: "))
 
 def calculator():
     if opt==1:
-        print(add(a,b))
+        return add(a,b)
     elif opt==2:
-        print(sub(a,b))
+        return sub(a,b)
     elif opt==3:
-        print(mul(a,b))
+        return mul(a,b)
     elif opt==4:
-        print(div(a,b))
+        return div(a,b)
     else:
-        print("Choose valid option.")
+        return ("Choose valid option.")
 
-calculator()
+print(f"Result= {calculator()}")
 
