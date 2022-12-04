@@ -1,4 +1,4 @@
-from operations import add,sub,mul,div #operations bata import gareko
+from operations import * #operations bata import gareko '*' le sabai function import garcha
 
 print("Operations:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Dvision")
 
